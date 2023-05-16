@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+</head>
+<body>
+    <h1>Lets Count the vowel :- </h1><h4>Vowels are: (a,e,i,o,u) or (A,E,I,O,U)</h4><br><br>
+    <input type="text" placeholder="write any word" id="input">
+    <button id="btn">Check</button> <br><br>
+    <p id="para"></p>
+
+
+    <script >
+        const input = document.getElementById("input");
+        btn.addEventListener("click",()=>{
+        var word = input.value  ;
+       
+        let count=0;
+        for (let i = 0; i < word.length; i++) {
+            if (word[i]=='a'||word[i]=='e' || word[i]=='i'||word[i]=='o'||word[i]=='u'||
+                word[i]=='A'||word[i]=='E' || word[i]=='I'||word[i]=='O'||word[i]=='U') {
+            count = count+1;
+           
+             } 
+           }
+           document.getElementById("para").innerText = "Total number of vowels in word "+ word + " is : "+ count;
+      
+       })
+        
+    </script>
+</body>
+</html>
